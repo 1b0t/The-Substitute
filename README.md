@@ -37,13 +37,11 @@ The main goal of this project is to help with [this: Trakt.tv API Images will be
 
 Create `dist/external-services/keys.json` with the following content:
 
-        ```json
         {
             "TRAKT_CLIENT_ID" : "",
             "FANART_TV_API_KEY" : "",
             "TMDB_API_KEY" : ""
         }
-        ```
 
 [Redis](http://redis.io) is required. If you want to use some other kv-store it should be pretty straight forward to adjust `src/utils/cache.coffee` to your needs.
 
@@ -51,7 +49,6 @@ Create `dist/external-services/keys.json` with the following content:
 
 You can adjust this to your preferences by modifying `dist/config.json`:
         
-        ```coffee
         {
             "cache_expires_after_seconds": 86400,
             "merge_assets" : false,
@@ -97,7 +94,6 @@ You can adjust this to your preferences by modifying `dist/config.json`:
                 }
             }
         }
-        ```
 
 ## Usage
 
@@ -133,7 +129,6 @@ You can adjust this to your preferences by modifying `dist/config.json`:
 
 #### merge_assets disabled 
 
-    ```json
     {
         "reference_id": "the-breakfast-club-1985",
         "ids": {
@@ -178,11 +173,9 @@ You can adjust this to your preferences by modifying `dist/config.json`:
             "service": "fanarttv"
         }
     }
-    ```
 
 #### merge_assets enabled 
 
-    ```json
     {
         "reference_id": "the-breakfast-club-1985",
         "ids": {
@@ -219,7 +212,6 @@ You can adjust this to your preferences by modifying `dist/config.json`:
             }
         }
     }
-    ```
 
 ## Deployment
 
