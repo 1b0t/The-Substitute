@@ -1,0 +1,22 @@
+{
+  "name": "the-substitude",
+  "version": "0.0.1",
+  "description": "Caching server which provides access to media image assets via constructable urls.",
+  "main": "dist/app.js",
+  "repository": { 
+    "type" : "git", 
+    "url" : "https://github.com/1b0t/The-Substitute.git"
+  },
+  "dependencies": {
+    "install": "^0.8.1",
+    "npm": "^3.10.8",
+    "redis": "^2.6.2",
+    "restify": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tobias Arends",
+  "license": "SEE LICENSE IN LICENCE"
+}

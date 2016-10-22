@@ -1,0 +1,39 @@
+{
+    "cache_expires_after_seconds": 86400,
+    "merge_assets" : true,
+    "merge_priority_defaults" : ["tmdb","fanarttv"],
+    "merge_prioritys" :{
+        "poster":["tmdb","fanarttv"],
+        "fanart":["tmdb","fanarttv"]
+    },
+    "tmdb":{
+        "enabled" : true,
+        "asset_mapping" : {
+                "posters" : "poster",
+                "backdrops" : "fanart",
+                "stills":"screenshot"
+            }
+    },
+    "fanarttv" :{
+        "enabled" : false,
+        "asset_mapping" : {
+                "movies":{
+                    "moviebackground":"fanart",
+                    "movieposter":"poster",
+                    "moviedisc":null,
+                    "moviebanner":"banner",
+                    "hdmovieclearart":"clearart",
+                    "movielogo":null,
+                    "hdmovielogo":"logo"
+                },
+                "tv":{
+                    "showbackground":"fanart",
+                    "tvposter":"poster",
+                    "tvbanner":"banner",
+                    "clearart":"clearart",
+                    "hdtvlogo":"logo",
+                    "clearlogo":null
+                }
+            }
+    }
+}
