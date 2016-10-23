@@ -118,7 +118,7 @@
           }
         };
         if (season_number != null) {
-          options.path = "/" + TMDB_API_VERSION + "/tv/" + tvdb_id + "/season/" + season_number + "/images?api_key=" + keys.TMDB_API_KEY;
+          options.path = "/" + TMDB_API_VERSION + "/tv/" + tvdb_id + "/season/" + season_number + "/images?api_key=" + keys.TMDB_API_KEY + "&language=en";
         }
         if ((season_number != null) && (episode_number != null)) {
           options.path = "/" + TMDB_API_VERSION + "/tv/" + tvdb_id + "/season/" + season_number + "/episode/" + episode_number + "/images?api_key=" + keys.TMDB_API_KEY;
