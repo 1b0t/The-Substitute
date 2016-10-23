@@ -80,8 +80,8 @@
           if (traktIDs != null) {
             if (config.tmdb.enabled) {
               id = json["ids"]["tmdb"];
+              pendingRequests = pendingRequests + 1;
               if (id != null) {
-                pendingRequests = pendingRequests + 1;
                 switch (mediaType) {
                   case self.mediaType.Movies:
                     tmdb.fetchImageMetaData(tmdb.mediaType.Movie, id, processResponseFromTMDB);

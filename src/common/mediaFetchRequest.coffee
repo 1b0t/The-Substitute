@@ -65,8 +65,8 @@ self = module.exports =
                 if traktIDs?
                     if config.tmdb.enabled
                         id = json["ids"]["tmdb"]
+                        pendingRequests = pendingRequests + 1
                         if id?
-                            pendingRequests = pendingRequests + 1
                             switch mediaType
                                 when self.mediaType.Movies
                                     tmdb.fetchImageMetaData(
