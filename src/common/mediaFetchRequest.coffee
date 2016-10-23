@@ -78,6 +78,8 @@ self = module.exports =
                                         tmdb.mediaType.Show,
                                         id,
                                         processResponseFromTMDB,season_number,episode_number)
+                        else
+                            error(null,{success:false,message:"tmdb id not defined"})
                     if config.fanarttv.enabled
                         pendingRequests = pendingRequests + 1
                         switch mediaType
@@ -88,6 +90,8 @@ self = module.exports =
                                         fanarttv.mediaType.Movie,
                                         id,
                                         processResponseFromFanartTV)
+                                else
+                                    error(null,{success:false,message:"imdb id not defined"})
                             when self.mediaType.Shows
                                 id = json["ids"]["tvdb"]
                                 if id?
@@ -95,6 +99,8 @@ self = module.exports =
                                         fanarttv.mediaType.Show,
                                         id,
                                         processResponseFromFanartTV,season_number,episode_number)
+                                else
+                                    error(null,{success:false,message:"tvdb id not defined"})
                     if config.fanarttv.enabled == false && config.tmdb.enabled == false
                         error(null,{success:false,message:"no third party image services enabled in config.json"})
                             

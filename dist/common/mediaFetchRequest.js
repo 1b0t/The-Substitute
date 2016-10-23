@@ -89,6 +89,11 @@
                   case self.mediaType.Shows:
                     tmdb.fetchImageMetaData(tmdb.mediaType.Show, id, processResponseFromTMDB, season_number, episode_number);
                 }
+              } else {
+                error(null, {
+                  success: false,
+                  message: "tmdb id not defined"
+                });
               }
             }
             if (config.fanarttv.enabled) {
@@ -98,12 +103,22 @@
                   id = json["ids"]["imdb"];
                   if (id != null) {
                     fanarttv.fetchImageMetaData(fanarttv.mediaType.Movie, id, processResponseFromFanartTV);
+                  } else {
+                    error(null, {
+                      success: false,
+                      message: "imdb id not defined"
+                    });
                   }
                   break;
                 case self.mediaType.Shows:
                   id = json["ids"]["tvdb"];
                   if (id != null) {
                     fanarttv.fetchImageMetaData(fanarttv.mediaType.Show, id, processResponseFromFanartTV, season_number, episode_number);
+                  } else {
+                    error(null, {
+                      success: false,
+                      message: "tvdb id not defined"
+                    });
                   }
               }
             }
