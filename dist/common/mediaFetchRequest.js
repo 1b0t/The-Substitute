@@ -92,7 +92,7 @@
               } else {
                 error(null, {
                   success: false,
-                  message: "tmdb id not defined"
+                  message: "tmdb_id not defined"
                 });
               }
             }
@@ -106,7 +106,7 @@
                   } else {
                     error(null, {
                       success: false,
-                      message: "imdb id not defined"
+                      message: "imdb_id not defined"
                     });
                   }
                   break;
@@ -117,7 +117,7 @@
                   } else {
                     error(null, {
                       success: false,
-                      message: "tvdb id not defined"
+                      message: "tvdb_id not defined"
                     });
                   }
               }
